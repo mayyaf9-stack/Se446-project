@@ -266,18 +266,14 @@ Research Question: What percentage of crimes result in an arrest?
 
  Instructions
 ```bash
-mapred streaming \
-  -files mapper_task5.py,reducer_sum.py \
-  -mapper "python3 mapper_task5.py" \
-  -reducer "python3 reducer_sum.py" \
-  -input /data/chicago_crimes.csv \
-  -output /user/mbsalmogren/project/m1/task5
+mapred streaming -files mapper_arrest.py,reducer_sum.py -mapper "python3 mapper_arrest.py" -reducer "python3 reducer_sum.py" -input /data/chicago_crimes.csv -output /user/ialhagbani/project/m1/task5
+
 ```
 
  Sample Results
 ```
-false    571140
-true     221932
+false   551554
+true    215199
 ```
 
  Interpretation
@@ -285,55 +281,90 @@ Only 28% of crimes in Chicago result in an arrest, meaning that the vast majorit
 
  Execution Logs
 ```
-mbsalmogren@master-node:~$ mapred streaming \
-  -files mapper_task5.py,reducer_sum.py \
-  -mapper "python3 mapper_task5.py" \
-  -reducer "python3 reducer_sum.py" \
-  -input /data/chicago_crimes.csv \
-  -output /user/mbsalmogren/project/m1/task5
-packageJobJar: [] [/opt/hadoop-3.4.1/share/hadoop/tools/lib/hadoop-streaming-3.4.1.jar] /tmp/streamjob872011263419280130.jar tmpDir=null
-2026-03-27 13:32:58,544 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at master-node/134.209.172.50:8032
-2026-03-27 13:32:58,851 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at master-node/134.209.172.50:8032
-2026-03-27 13:32:59,290 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/mbsalmogren/.staging/job_1771402826595_0261
-2026-03-27 13:33:01,092 INFO mapred.FileInputFormat: Total input files to process : 1
-2026-03-27 13:33:01,122 INFO net.NetworkTopology: Adding a new node: /default-rack/164.92.103.148:9866
-2026-03-27 13:33:01,123 INFO net.NetworkTopology: Adding a new node: /default-rack/146.190.147.119:9866
-2026-03-27 13:33:01,797 INFO mapreduce.JobSubmitter: number of splits:2
-2026-03-27 13:33:03,130 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1771402826595_0261
-2026-03-27 13:33:03,130 INFO mapreduce.JobSubmitter: Executing with tokens: []
-2026-03-27 13:33:03,481 INFO conf.Configuration: resource-types.xml not found
-2026-03-27 13:33:03,481 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
-2026-03-27 13:33:03,612 INFO impl.YarnClientImpl: Submitted application application_1771402826595_0261
-2026-03-27 13:33:03,669 INFO mapreduce.Job: The url to track the job: http://master-node:8088/proxy/application_1771402826595_0261/
-2026-03-27 13:33:03,673 INFO mapreduce.Job: Running job: job_1771402826595_0261
-2026-03-27 13:33:22,440 INFO mapreduce.Job: Job job_1771402826595_0261 running in uber mode : false
-2026-03-27 13:33:22,442 INFO mapreduce.Job:  map 0% reduce 0%
-2026-03-27 13:33:46,809 INFO mapreduce.Job:  map 100% reduce 0%
-2026-03-27 13:34:00,160 INFO mapreduce.Job:  map 100% reduce 100%
-2026-03-27 13:34:04,235 INFO mapreduce.Job: Job job_1771402826595_0261 completed successfully
-2026-03-27 13:34:04,461 INFO mapreduce.Job: Counters: 54
+mapred streaming -files mapper_arrest.py,reducer_sum.py -mapper "python3 mapper_arrest.py" -reducer "python3 reducer_sum.py" -input /data/chicago_crimes.csv -output /user/ialhagbani/project/m1/task5
+
+packageJobJar: [] [/opt/hadoop-3.4.1/share/hadoop/tools/lib/hadoop-streaming-3.4.1.jar] /tmp/streamjob16481612206141624589.jar tmpDir=null
+2026-03-27 15:59:51,058 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at master-node/134.209.172.50:8032
+2026-03-27 15:59:51,376 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at master-node/134.209.172.50:8032
+2026-03-27 15:59:51,814 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/ialhagbani/.staging/job_1771402826595_0266
+2026-03-27 15:59:53,458 INFO mapred.FileInputFormat: Total input files to process : 1
+2026-03-27 15:59:53,502 INFO net.NetworkTopology: Adding a new node: /default-rack/146.190.147.119:9866
+2026-03-27 15:59:53,503 INFO net.NetworkTopology: Adding a new node: /default-rack/164.92.103.148:9866
+2026-03-27 15:59:54,149 INFO mapreduce.JobSubmitter: number of splits:2
+2026-03-27 15:59:55,008 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1771402826595_0266
+2026-03-27 15:59:55,008 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2026-03-27 15:59:55,322 INFO conf.Configuration: resource-types.xml not found
+2026-03-27 15:59:55,323 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2026-03-27 15:59:55,423 INFO impl.YarnClientImpl: Submitted application application_1771402826595_0266
+2026-03-27 15:59:55,469 INFO mapreduce.Job: The url to track the job: http://master-node:8088/proxy/application_1771402826595_0266/
+2026-03-27 15:59:55,470 INFO mapreduce.Job: Running job: job_1771402826595_0266
+2026-03-27 16:00:18,496 INFO mapreduce.Job: Job job_1771402826595_0266 running in uber mode : false
+2026-03-27 16:00:18,497 INFO mapreduce.Job:  map 0% reduce 0%
+2026-03-27 16:00:48,366 INFO mapreduce.Job:  map 100% reduce 0%
+2026-03-27 16:01:02,036 INFO mapreduce.Job:  map 100% reduce 100%
+2026-03-27 16:01:06,222 INFO mapreduce.Job: Job job_1771402826595_0266 completed successfully
+2026-03-27 16:01:06,500 INFO mapreduce.Job: Counters: 54
         File System Counters
-                FILE: Number of bytes read=7768020
-                FILE: Number of bytes written=16479284
+                FILE: Number of bytes read=7452337
+                FILE: Number of bytes written=15847945
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
                 HDFS: Number of bytes read=181964998
-                HDFS: Number of bytes written=875
+                HDFS: Number of bytes written=25
                 HDFS: Number of read operations=11
+                HDFS: Number of large read operations=0
                 HDFS: Number of write operations=2
+                HDFS: Number of bytes read erasure-coded=0
         Job Counters
                 Launched map tasks=2
                 Launched reduce tasks=1
                 Data-local map tasks=2
+                Total time spent by all maps in occupied slots (ms)=107802
+                Total time spent by all reduces in occupied slots (ms)=21408
+                Total time spent by all map tasks (ms)=53901
+                Total time spent by all reduce tasks (ms)=10704
+                Total vcore-milliseconds taken by all map tasks=53901
+                Total vcore-milliseconds taken by all reduce tasks=10704
+                Total megabyte-milliseconds taken by all map tasks=27597312
+                Total megabyte-milliseconds taken by all reduce tasks=5480448
         Map-Reduce Framework
                 Map input records=793074
-                Map output records=793072
-                Reduce input groups=44
-                Reduce output records=43
+                Map output records=766753
+                Map output bytes=5918825
+                Map output materialized bytes=7452343
+                Input split bytes=198
+                Combine input records=0
+                Combine output records=0
+                Reduce input groups=2
+                Reduce shuffle bytes=7452343
+                Reduce input records=766753
+                Reduce output records=2
+                Spilled Records=1533506
+                Shuffled Maps =2
                 Failed Shuffles=0
+                Merged Map outputs=2
+                GC time elapsed (ms)=789
+                CPU time spent (ms)=8700
+                Physical memory (bytes) snapshot=646029312
+                Virtual memory (bytes) snapshot=6560829440
+                Total committed heap usage (bytes)=348176384
+                Peak Map Physical memory (bytes)=249430016
+                Peak Map Virtual memory (bytes)=2185342976
+                Peak Reduce Physical memory (bytes)=151699456
+                Peak Reduce Virtual memory (bytes)=2190311424
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
         File Input Format Counters
                 Bytes Read=181964800
         File Output Format Counters
-                Bytes Written=875
-2026-03-27 13:34:04,466 INFO streaming.StreamJob: Output directory: /user/mbsalmogren/project/m1/task5
+                Bytes Written=25
+2026-03-27 16:01:06,501 INFO streaming.StreamJob: Output directory: /user/ialhagbani/project/m1/task5
 ```
 
 ---
