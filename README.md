@@ -13,7 +13,7 @@ Abdulaziz Alnemer,
 
  Executive Summary
 
-Our team built a MapReduce pipeline on the department's Hadoop Cluster to analyze the Chicago Crime dataset (2001–present) containing over 793,000 records. Each task uses a dedicated Python mapper script that parses the CSV dataset and emits key-value pairs, combined with a shared reducer that aggregates counts per key. Jobs were executed using Hadoop. The pipeline answers four critical questions: what crimes are most common, where they occur, how crime volume changes over time, and how often arrests are made.
+Our team built a MapReduce pipeline on Hadoop Cluster to analyze the Chicago Crime dataset (2001–present) containing over 793,000 records. Each task uses a dedicated Python mapper script that parses the CSV dataset and emits key-value pairs, combined with a shared reducer that aggregates counts per key. Jobs were executed using Hadoop. The pipeline answers four critical questions: what crimes are most common, where they occur, how crime volume changes over time, and how often arrests are made.
 
 ---
 
