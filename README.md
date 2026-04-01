@@ -8,6 +8,7 @@ Mishari Al Mogren,
 Ibrahim Alhagbani,
 Nawaf Alshuaibi,
 Abdulaziz Alnemer,
+Abdulaziz Albaz
 
 ---
 
@@ -375,3 +376,4 @@ Member Contributions
 | Nawaf Alshuaibi | Task 3 |
 | Abdulaziz Al Nemer | Task 4 |
 | Ibrahim Alhugbani | Task 5|
+| Abdulaziz Albaz | Duplicated Task |
