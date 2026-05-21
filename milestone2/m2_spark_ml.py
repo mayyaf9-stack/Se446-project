@@ -1,3 +1,11 @@
+"""
+Tasks 5-7 and Task 11: Spark ML Pipeline
+
+Task 5 Author: Ibrahim Alhagbani
+Task 6 Author: Abdulaziz Albaz
+Task 7 Author: Nawaf Alshuaibi
+Task 11 Author: Mishari Al Mogren
+"""
 import sys
 import time
 
