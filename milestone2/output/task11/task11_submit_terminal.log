@@ -1,0 +1,67 @@
+26/05/21 19:08:44 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/05/21 19:08:45 INFO DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at master-node/134.209.172.50:8032
+26/05/21 19:08:46 INFO Configuration: resource-types.xml not found
+26/05/21 19:08:46 INFO ResourceUtils: Unable to find 'resource-types.xml'.
+26/05/21 19:08:46 INFO Client: Verifying our application has not requested more than the maximum memory capability of the cluster (1536 MB per container)
+26/05/21 19:08:46 INFO Client: Will allocate AM container, with 497 MB memory including 32 MB overhead
+26/05/21 19:08:46 INFO Client: Setting up container launch context for our AM
+26/05/21 19:08:46 INFO Client: Setting up the launch environment for our AM container
+26/05/21 19:08:46 INFO Client: Preparing resources for our AM container
+26/05/21 19:08:47 INFO Client: Uploading resource file:/opt/spark-3.5.4-bin-hadoop3/jars/kafka/commons-pool2-2.12.0.jar -> hdfs://master-node:9000/user/mbsalmogren/.sparkStaging/application_1778738889964_0067/commons-pool2-2.12.0.jar
+26/05/21 19:08:48 INFO Client: Uploading resource file:/opt/spark-3.5.4-bin-hadoop3/jars/kafka/kafka-clients-3.9.0.jar -> hdfs://master-node:9000/user/mbsalmogren/.sparkStaging/application_1778738889964_0067/kafka-clients-3.9.0.jar
+26/05/21 19:08:49 INFO Client: Uploading resource file:/opt/spark-3.5.4-bin-hadoop3/jars/kafka/spark-sql-kafka-0-10_2.12-3.5.4.jar -> hdfs://master-node:9000/user/mbsalmogren/.sparkStaging/application_1778738889964_0067/spark-sql-kafka-0-10_2.12-3.5.4.jar
+26/05/21 19:08:49 INFO Client: Uploading resource file:/opt/spark-3.5.4-bin-hadoop3/jars/kafka/spark-token-provider-kafka-0-10_2.12-3.5.4.jar -> hdfs://master-node:9000/user/mbsalmogren/.sparkStaging/application_1778738889964_0067/spark-token-provider-kafka-0-10_2.12-3.5.4.jar
+26/05/21 19:08:50 INFO Client: Uploading resource file:/home/mbsalmogren/SE446_Milestone2_Cluster_Tasks/m2_spark_ml.py -> hdfs://master-node:9000/user/mbsalmogren/.sparkStaging/application_1778738889964_0067/m2_spark_ml.py
+26/05/21 19:08:50 INFO Client: Uploading resource file:/opt/spark-3.5.4-bin-hadoop3/python/lib/pyspark.zip -> hdfs://master-node:9000/user/mbsalmogren/.sparkStaging/application_1778738889964_0067/pyspark.zip
+26/05/21 19:08:51 INFO Client: Uploading resource file:/opt/spark-3.5.4-bin-hadoop3/python/lib/py4j-0.10.9.7-src.zip -> hdfs://master-node:9000/user/mbsalmogren/.sparkStaging/application_1778738889964_0067/py4j-0.10.9.7-src.zip
+26/05/21 19:08:52 INFO Client: Uploading resource file:/tmp/spark-039bb986-4220-46c5-ad0d-2f552ac550bc/__spark_conf__15370488243423648733.zip -> hdfs://master-node:9000/user/mbsalmogren/.sparkStaging/application_1778738889964_0067/__spark_conf__.zip
+26/05/21 19:08:53 INFO SecurityManager: Changing view acls to: mbsalmogren
+26/05/21 19:08:53 INFO SecurityManager: Changing modify acls to: mbsalmogren
+26/05/21 19:08:53 INFO SecurityManager: Changing view acls groups to: 
+26/05/21 19:08:53 INFO SecurityManager: Changing modify acls groups to: 
+26/05/21 19:08:53 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: mbsalmogren; groups with view permissions: EMPTY; users with modify permissions: mbsalmogren; groups with modify permissions: EMPTY
+26/05/21 19:08:53 INFO Client: Submitting application application_1778738889964_0067 to ResourceManager
+26/05/21 19:08:53 INFO YarnClientImpl: Submitted application application_1778738889964_0067
+26/05/21 19:08:54 INFO Client: Application report for application_1778738889964_0067 (state: ACCEPTED)
+26/05/21 19:08:54 INFO Client: 
+	 client token: N/A
+	 diagnostics: AM container is launched, waiting for AM container to Register with RM
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: root.default
+	 start time: 1779390533207
+	 final status: UNDEFINED
+	 tracking URL: http://master-node:8088/proxy/application_1778738889964_0067/
+	 user: mbsalmogren
+26/05/21 19:09:14 INFO Client: Application report for application_1778738889964_0067 (state: RUNNING)
+26/05/21 19:09:14 INFO Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: worker-node-1
+	 ApplicationMaster RPC port: 34943
+	 queue: root.default
+	 start time: 1779390533207
+	 final status: UNDEFINED
+	 tracking URL: http://master-node:8088/proxy/application_1778738889964_0067/
+	 user: mbsalmogren
+26/05/21 19:09:44 INFO Client: Application report for application_1778738889964_0067 (state: RUNNING)
+26/05/21 19:10:14 INFO Client: Application report for application_1778738889964_0067 (state: RUNNING)
+26/05/21 19:10:44 INFO Client: Application report for application_1778738889964_0067 (state: RUNNING)
+26/05/21 19:11:14 INFO Client: Application report for application_1778738889964_0067 (state: RUNNING)
+26/05/21 19:11:44 INFO Client: Application report for application_1778738889964_0067 (state: RUNNING)
+26/05/21 19:12:14 INFO Client: Application report for application_1778738889964_0067 (state: RUNNING)
+26/05/21 19:12:45 INFO Client: Application report for application_1778738889964_0067 (state: RUNNING)
+26/05/21 19:13:04 INFO Client: Application report for application_1778738889964_0067 (state: FINISHED)
+26/05/21 19:13:04 INFO Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: worker-node-1
+	 ApplicationMaster RPC port: 34943
+	 queue: root.default
+	 start time: 1779390533207
+	 final status: SUCCEEDED
+	 tracking URL: http://master-node:8088/proxy/application_1778738889964_0067/
+	 user: mbsalmogren
+26/05/21 19:13:04 INFO ShutdownHookManager: Shutdown hook called
+26/05/21 19:13:04 INFO ShutdownHookManager: Deleting directory /tmp/spark-5b16136d-3f02-4bac-9034-ea9078534ba0
+26/05/21 19:13:04 INFO ShutdownHookManager: Deleting directory /tmp/spark-039bb986-4220-46c5-ad0d-2f552ac550bc
